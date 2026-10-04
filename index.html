@@ -26,6 +26,11 @@
     --pixel-font: "DotGothic16", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", monospace;
   }
   html, body { height: 100%; }
+  /* スマホでタップしたときの青い四角（タップハイライト）・選択色・フォーカス枠を出さない */
+  *, *::before, *::after { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: transparent; }
+  :focus:not(:focus-visible) { outline: none; }
+  img { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; }
   [hidden] { display: none !important; }
   body {
     margin: 0;
